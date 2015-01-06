@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 方式二 -->
+<!-- 
+在控件android:id="@+id/news_item_content"
+中设置android:paddingLeft="20dip"比设置
+android:layout_marginLeft=""的效果要好得多
+ -->
+<!-- 
+在控件android:id="@+id/news_item_arrow"
+中设置
+android:layout_alignParentRight="true"
+android:layout_centerVertical="true"
+从而使其垂直居中.这样的处理方式比方式(一)
+中要好许多.当然这里采用了相对布局
+ -->
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+       >
+
+        <TextView
+            android:id="@+id/news_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dip"
+            android:paddingLeft="5dip"
+            android:text="2014/12/16"
+            android:textSize="12sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/news_item_content"
+            android:layout_width="240dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:maxLines="4"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:textSize="20sp"
+            android:text="contentcontentcontentcontentcontentcontentcontentcontent" >
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
